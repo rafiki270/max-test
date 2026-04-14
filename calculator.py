@@ -29,6 +29,5 @@ def process_numbers(numbers):
         "average": avg,
         "sum": sum(numbers),
         "count": len(numbers),
-        "max": max(numbers),  # BUG: max() on empty list crashes
-        "min": min(numbers),  # BUG: min() on empty list crashes
+        "min": min(numbers),
     }
