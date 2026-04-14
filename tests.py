@@ -20,11 +20,12 @@ def test_divide_by_zero():
     with pytest.raises(ValueError):
         divide(10, 0)
 
-def test_average_empty_list():
+def test_average_empty():
     import pytest
     with pytest.raises(ValueError):
         calculate_average([])
 
-def test_process_numbers_empty_list():
-    result = process_numbers([])
-    assert result == {}
+def test_process_numbers_empty():
+    import pytest
+    with pytest.raises(ValueError):
+        process_numbers([])
