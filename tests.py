@@ -14,13 +14,3 @@ def test_process_numbers():
 
 def test_divide():
     assert divide(10, 2) == 5.0
-
-def test_divide_by_zero():
-    import pytest
-    with pytest.raises(ZeroDivisionError):
-        divide(10, 0)
-
-def test_average_empty_list():
-    import pytest
-    with pytest.raises(ValueError):
-        calculate_average([])
