@@ -23,7 +23,7 @@ def safe_divide(a, b):
 def process_numbers(numbers):
     """Process a list of numbers and return stats."""
     if not numbers:
-        raise ValueError("Cannot process empty list")
+        return {}
     avg = calculate_average(numbers)
     return {
         "average": avg,

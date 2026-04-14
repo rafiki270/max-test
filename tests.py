@@ -26,6 +26,5 @@ def test_average_empty():
         calculate_average([])
 
 def test_process_numbers_empty():
-    import pytest
-    with pytest.raises(ValueError):
-        process_numbers([])
+    result = process_numbers([])
+    assert result == {}
