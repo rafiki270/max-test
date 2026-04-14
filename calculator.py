@@ -2,13 +2,15 @@
 
 def divide(a, b):
     """Divide a by b."""
-    return a / b  # BUG: no check for division by zero
+    if b == 0:
+        raise ZeroDivisionError("division by zero")
+    return a / b
 
 def calculate_average(numbers):
     """Calculate the average of a list of numbers."""
-    total = sum(numbers)
-    count = len(numbers)
-    return total / count  # BUG: crashes if list is empty
+    if len(numbers) == 0:
+        raise ValueError("cannot calculate average of empty list")
+    return sum(numbers) / len(numbers)
 
 def safe_divide(a, b):
     """Safely divide a by b, returning None on division by zero."""
