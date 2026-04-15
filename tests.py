@@ -1,6 +1,6 @@
 """tests.py - tests for calculator."""
 
-from calculator import calculate_average, process_numbers, divide, median
+from calculator import calculate_average, process_numbers, divide, median, clamp
 
 def test_average():
     result = calculate_average([1, 2, 3, 4, 5])
@@ -39,3 +39,12 @@ def test_median_empty():
     import pytest
     with pytest.raises(ValueError):
         median([])
+
+def test_clamp_below_range():
+    assert clamp(1, 5, 10) == 5
+
+def test_clamp_in_range():
+    assert clamp(7, 5, 10) == 7
+
+def test_clamp_above_range():
+    assert clamp(15, 5, 10) == 10

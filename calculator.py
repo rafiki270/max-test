@@ -31,6 +31,16 @@ def median(numbers):
         return (sorted_nums[mid - 1] + sorted_nums[mid]) / 2
     return float(sorted_nums[mid])
 
+def clamp(value, minimum, maximum):
+    """Clamp value between minimum and maximum."""
+    if minimum > maximum:
+        raise ValueError("minimum cannot be greater than maximum")
+    if value < minimum:
+        return minimum
+    if value > maximum:
+        return maximum
+    return value
+
 def process_numbers(numbers):
     """Process a list of numbers and return stats."""
     if not numbers:
