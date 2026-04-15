@@ -39,6 +39,10 @@ def square(n):
     """Return the value multiplied by itself."""
     return n * n
 
+def cube(n):
+    """Return the value multiplied by itself three times."""
+    return n * n * n
+
 def process_numbers(numbers):
     """Process a list of numbers and return stats."""
     if not numbers:
