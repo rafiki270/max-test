@@ -39,6 +39,10 @@ def square(n):
     """Return the value multiplied by itself."""
     return n * n
 
+def fifth_power(value):
+    """Return the value multiplied by itself five times."""
+    return value * value * value * value * value
+
 def process_numbers(numbers):
     """Process a list of numbers and return stats."""
     if not numbers:
