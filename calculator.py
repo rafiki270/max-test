@@ -20,6 +20,17 @@ def safe_divide(a, b):
         return None
     return a / b
 
+def median(numbers):
+    """Calculate the median of a list of integers."""
+    if not numbers:
+        raise ValueError("Cannot calculate median of empty list")
+    sorted_nums = sorted(numbers)
+    n = len(sorted_nums)
+    mid = n // 2
+    if n % 2 == 0:
+        return (sorted_nums[mid - 1] + sorted_nums[mid]) / 2
+    return float(sorted_nums[mid])
+
 def process_numbers(numbers):
     """Process a list of numbers and return stats."""
     if not numbers:

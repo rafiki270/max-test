@@ -1,6 +1,6 @@
 """tests.py - tests for calculator."""
 
-from calculator import calculate_average, process_numbers, divide
+from calculator import calculate_average, process_numbers, divide, median
 
 def test_average():
     result = calculate_average([1, 2, 3, 4, 5])
@@ -28,3 +28,14 @@ def test_average_empty():
 def test_process_numbers_empty():
     result = process_numbers([])
     assert result == {}
+
+def test_median_odd_length():
+    assert median([1, 3, 2]) == 2.0
+
+def test_median_even_length():
+    assert median([1, 2, 3, 4]) == 2.5
+
+def test_median_empty():
+    import pytest
+    with pytest.raises(ValueError):
+        median([])
