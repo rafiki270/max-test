@@ -1,6 +1,6 @@
 """tests.py - tests for calculator."""
 
-from calculator import calculate_average, process_numbers, divide, median, is_even
+from calculator import calculate_average, process_numbers, divide, median, is_even, square
 
 def test_average():
     result = calculate_average([1, 2, 3, 4, 5])
@@ -51,3 +51,12 @@ def test_is_even_zero():
 
 def test_is_even_negative_even():
     assert is_even(-6) is True
+
+def test_square_positive():
+    assert square(5) == 25
+
+def test_square_zero():
+    assert square(0) == 0
+
+def test_square_negative():
+    assert square(-3) == 9

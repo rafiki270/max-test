@@ -35,6 +35,10 @@ def is_even(n):
     """Return True if n is even, False if odd."""
     return n % 2 == 0
 
+def square(n):
+    """Return the value multiplied by itself."""
+    return n * n
+
 def process_numbers(numbers):
     """Process a list of numbers and return stats."""
     if not numbers:
