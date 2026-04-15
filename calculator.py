@@ -31,6 +31,10 @@ def median(numbers):
         return (sorted_nums[mid - 1] + sorted_nums[mid]) / 2
     return float(sorted_nums[mid])
 
+def is_even(n):
+    """Return True if n is even, False if odd."""
+    return n % 2 == 0
+
 def process_numbers(numbers):
     """Process a list of numbers and return stats."""
     if not numbers:
