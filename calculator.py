@@ -1,5 +1,9 @@
 """calculator.py - a simple calculator with intentional bugs."""
 
+def multiply(a, b):
+    """Return the product of two numbers."""
+    return a * b
+
 def divide(a, b):
     """Divide a by b."""
     if b == 0:
