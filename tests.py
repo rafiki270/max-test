@@ -1,6 +1,6 @@
 """tests.py - tests for calculator."""
 
-from calculator import calculate_average, process_numbers, divide, median, is_even, square, fifth_power
+from calculator import calculate_average, process_numbers, divide, median, is_even, square, fifth_power, multiply
 
 def test_average():
     result = calculate_average([1, 2, 3, 4, 5])
@@ -14,6 +14,9 @@ def test_process_numbers():
 
 def test_divide():
     assert divide(10, 2) == 5.0
+
+def test_multiply():
+    assert multiply(2, 3) == 6
 
 def test_divide_by_zero():
     import pytest
