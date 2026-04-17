@@ -17,7 +17,7 @@ def test_divide():
 
 def test_divide_by_zero():
     import pytest
-    with pytest.raises(ValueError):
+    with pytest.raises(ZeroDivisionError, match="division by zero"):
         divide(10, 0)
 
 def test_average_empty():
