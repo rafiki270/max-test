@@ -3,7 +3,7 @@
 def divide(a, b):
     """Divide a by b."""
     if b == 0:
-        raise ValueError("Cannot divide by zero")
+        raise ZeroDivisionError("division by zero")
     return a / b
 
 def calculate_average(numbers):
